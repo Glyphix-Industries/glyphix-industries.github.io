@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GLYPHIX INDUSTRIES | TRULY™</title>
+    <style>
+        :root { --metal: #d1d1d1; --ink: #000000; --accent: #c5a059; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f4f4f4; color: var(--ink); margin: 0; }
+        
+        nav { padding: 40px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { width: 40px; }
+        
+        .hero { padding: 100px 10%; }
+        h1 { font-size: 5rem; font-weight: 300; margin: 0; text-transform: uppercase; }
+        .divider { width: 100px; height: 2px; background: var(--accent); margin: 20px 0; }
+        
+        .verify-section { margin-top: 60px; }
+        input { border: none; border-bottom: 2px solid #000; background: transparent; padding: 10px; font-size: 1.5rem; width: 300px; }
+        button { background: #000; color: #fff; padding: 15px 30px; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .specs { margin-top: 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="https://i.postimg.cc/9M40fBq6/logo.png" class="logo">
+    <div>GLYPHIX INDUSTRIES</div>
+</nav>
+
+<div class="hero">
+    <h1>TRULY™</h1>
+    <div class="divider"></div>
+    <p>THE PRECISION INSTRUMENT FOR THE HANDWRITTEN ERA.</p>
+
+    <div class="verify-section">
+        <h3>AUTHENTICITY REGISTRY</h3>
+        <input type="text" id="serialInput" placeholder="SERIAL NUMBER">
+        <button onclick="verify()">Validate</button>
+        <p id="result"></p>
+    </div>
+
+    <div class="specs">
+        <div>
+            <h4>DESIGN PHILOSOPHY</h4>
+            <p>Weighted for balance. Balanced for control. Glyphix Industries ensures every Truly™ pen meets professional standards.</p>
+        </div>
+        <div>
+            <h4>WARRANTY</h4>
+            <p>Every serialized unit is registered in our private ledger. Verification confirms the origin of your instrument.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function verify() {
+        const input = document.getElementById('serialInput').value.trim();
+        document.getElementById('result').innerHTML = `Verifying serial: ${input} against ledger...`;
+    }
+</script>
+</body>
+</html>

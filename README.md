@@ -1,1 +1,0 @@
-# glyphix-industries.github.io
